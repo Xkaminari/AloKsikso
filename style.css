@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+    overflow: hidden;
+}
+
+.bg-container {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EC7914;
+}
+
+.door-img {
+    position: relative;
+    display: block;
+    top: -70px;
+    margin: auto;
+    width: 100%;
+    height: 110%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.da {
+    text-decoration: underline;
+}
+
+.lang-btn {
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    font-family: 'Aladin', cursive;
+    margin: 5px 10px;
+    color: #7d0096;
+}
+
+.slogan {
+    margin: 30px 0 0 0;
+    font-family: 'Aladin', cursive;
+    color: #7d0096;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.couscous-img {
+    display: block;
+    margin: 50px auto 0px auto;
+    width: 70vw;
+}
+
+.explaining-text {
+    position: relative;
+}
+
+.text-container {
+    width: 70vw;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.text-explaining {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 65px;
+    font-family: 'Aladin', cursive;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.interaction-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px 10px 30px 10px;
+}
+
+.gradiant {
+    z-index: -1;
+    background: linear-gradient(45deg, rgba(125,0,150,1) 0%, rgba(236,121,20,1) 70%);
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    transform: translate(0px, -30px);
+    transition: 1s ease;
+}
+
+.avis-btn {
+    border: none;
+    background: none;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    font-family: 'Aladin', cursive;
+    cursor: pointer;
+}
+
+.btn-container:hover .gradiant{
+    animation: btn-baground-change 3s ease;
+}
+
+@keyframes btn-baground-change {
+    0%{transform: translate(0px, 0px);}
+    100%{transform: translate(-50px, -50px);}
+}
+
+/* blan pop up */
+
+.pop-up-container {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(54,54,54,0.53);
+    background-blend-mode: normal;
+    backdrop-filter: blur(6px);
+}
+
+.exit-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: none;
+    background: none;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+#blan-pop-up {
+    display: none;
+}
+
+.pop-up {
+    width: 85vw;
+    height: 45vh;
+    border-radius: 36px;
+    background: rgba(0,0,0,0.5);
+    background-blend-mode: normal;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.pop-up-title {
+    color: #ffffff;
+    font-family: 'Aladin', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.first-line-input {
+    display: flex;
+    justify-content: space-around;
+    height: 8%;
+}
+
+.input-type {
+    width: 25%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+    font-family: 'Aladin', cursive;
+    font-size: 1.2em;
+    outline: none;
+    color: #ffffff;
+}
+
+.email-input-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.no-spam-msg {
+    color: #ffffff;
+    font-family: 'Aladin', cursive;
+    font-size: 1.5em;
+}
+
+.email-input {
+    width: 130%;
+    padding: 15px;
+}
+
+/* lala pop up */
+
+#lala-pop-up {
+    display: none;
+}
+
+.mablanch-textArea {
+    resize: none;
+    width: 65%;
+    height: 40%;
+    padding: 20px;
+}
+
+/* responsiv */
+
+@media screen and (max-width: 395px) {
+    .text-explaining {
+        font-size: 1.4em;
+    }
+    
+    .pop-up {
+        row-gap: 10px;
+    }
+    .email-input-part {
+        row-gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-height: 740px) {
+    .text-explaining {
+        font-size: 1.2em;
+    }
+    
+    .slogan {
+        margin: 0px 0 0 0;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    body {
+        row-gap: 25px;
+    }
+    
+    .text-container {
+        height: 30vh;
+    }
+    
+    .text-explaining {
+        top: 50px;
+        font-size: 1.2em;
+    }
+    
+    .couscous-img {
+        margin: 15px auto 0px auto;
+    }
+}

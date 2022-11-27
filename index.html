@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDfaYpRFKluxI2agxcgecjLW5M_Jgl0h_k",
+            authDomain: "aloksiksod-jem3a.firebaseapp.com",
+            projectId: "aloksiksod-jem3a",
+            storageBucket: "aloksiksod-jem3a.appspot.com",
+            messagingSenderId: "585141685885",
+            appId: "1:585141685885:web:9f980a6ab3aa6fbae4eb14"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/0b88fa2e74.js" crossorigin="anonymous"></script>
+    <title>Alo ksiksou Djem3a</title>
+</head>
+<body>
+    <div class="bg-container">
+        <img class="door-img" src="Door-baground.png" alt="vectoriele porte traditionel marocaine bab merrakch">
+    </div>
+    <header>
+        <button class="lang-btn fr">Français</button>
+        <button class="lang-btn da">Darija</button>
+    </header>
+    <main>
+        <div class="slogan">
+            tkheyl takol a7ssan <br> keskso o dim3ah <br> 7assanat !
+        </div>
+        <img class="couscous-img" src="couscousDecoupé.png" alt="couscous png">
+        <div class="explaining-text">
+            <img class="text-container" src="TextCard.png" alt="text container">
+            <div class="interaction-container">
+                <div class="btn-container">
+                    <button class="blan-btn avis-btn">BLAN</button>
+                    <div class="gradiant"></div>
+                </div>
+                <div class="btn-container">
+                    <button class="lala-btn avis-btn">LALA</button>
+                    <div class="gradiant"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="pop-up-container">
+        <button class="exit-btn"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="pop-up" id="blan-pop-up">
+            <h2 class="pop-up-title" id="blan-pop-tiltle">
+                <p>3tina lma3loumat dialek</p>
+                <p>bach n3lmouk nta louwel !</p>
+            </h2>
+            <div class="first-line-input">
+                <input class="input-type" id="Smitek" type="text" placeholder="Smitek">
+                <input class="input-type" id="Knitek" type="text" placeholder="Knitek">
+                <input class="input-type" id="Age" type="number" placeholder="Sinek">
+            </div>
+            <div class="email-input-part">
+                <p class="no-spam-msg">No span matkhafch !</p>
+                <input class="email-input input-type" id="Email" type="email" placeholder="exemple@gmail.com">
+            </div>
+            <div class="btn-container">
+                <button class="Bsmelah-btn avis-btn">Bsmelah</button>
+                <div class="gradiant"></div>
+            </div>
+        </div>
+        <div class="pop-up" id="lala-pop-up">
+            <h2 class="pop-up-title" id="lala-pop-tiltle">
+                <p>Chno ma 3jbekch fl fikra? :(</p>
+            </h2>
+            <textarea class="mablanch-textArea input-type" id="Message" placeholder="message" cols="30" rows="10"></textarea>
+            <div class="btn-container">
+                <button class="SifatMessage-btn avis-btn">Sifat message</button>
+                <div class="gradiant"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
